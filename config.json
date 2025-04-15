@@ -1,18 +1,21 @@
 {
-  "db_type": "sql_server",
-  "server": "localhost",
-  "username": "user",
-  "password": "password",
-  "database": "your_database",
-  "schemas": ["dbo"],
-  "tables": {
-    "dbo": ["your_table"]
-  },
-  "column_aliases": {
-    "dbo.your_table": {
-      "old_column_name": "new_column_name",
-      "old_column_name_2": "new_column_name_2"
-    }
-  },
-  "output_dir": "schemas"
+    "db_type": "sql_server",
+    "server": "localhost",
+    "database": "my_database",
+    "username": "my_user",
+    "password": "my_password",
+    "jdbc_jar": "/path/to/sqljdbc4.jar",
+    "schemas": ["public", "sales"],
+    "tables": {
+        "public": ["employees", "departments"],
+        "sales": ["orders"]
+    },
+    "column_aliases": {
+        "public.employees": {
+            "employee_id": "emp_id",
+            "first_name": "fname",
+            "last_name": "lname"
+        }
+    },
+    "output_dir": "schemas_output"
 }
