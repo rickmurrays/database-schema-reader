@@ -1,0 +1,18 @@
+{
+  "db_type": "sql_server",
+  "server": "localhost",
+  "username": "user",
+  "password": "password",
+  "database": "your_database",
+  "schemas": ["dbo"],
+  "tables": {
+    "dbo": ["your_table"]
+  },
+  "column_aliases": {
+    "dbo.your_table": {
+      "old_column_name": "new_column_name",
+      "old_column_name_2": "new_column_name_2"
+    }
+  },
+  "output_dir": "schemas"
+}
